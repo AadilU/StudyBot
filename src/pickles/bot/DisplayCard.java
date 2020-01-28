@@ -7,7 +7,7 @@ import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.events.message.guild.react.GuildMessageReactionAddEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
-public class FlipCard
+public class DisplayCard
 {
 	static EmbedBuilder b = new EmbedBuilder();
 	static Defenitions_Ch26 d;

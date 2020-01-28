@@ -21,7 +21,7 @@ public class RunBot extends ListenerAdapter{
 	{
 		System.out.println("Starting");
 		jda = new JDABuilder(AccountType.BOT).setToken("NjM4MTk5MjQ0MjAwNjA3NzU1.Xb6Nwg.r1bSzG5q0810uZdR-PVEZgiIREc").build();
-		jda.addEventListener(new helloCommand());
+		jda.addEventListener(new CommandList());
 		jda.addEventListener(new ChangeCard());
 	}
 	

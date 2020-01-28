@@ -12,10 +12,10 @@ public class ChangeCard extends ListenerAdapter
 {
 	public void onGuildMessageReactionAdd(GuildMessageReactionAddEvent event)
 	{
-		Defenitions_Ch26 de = FlipCard.d;
-		Defenitions_Ch27 de1 = FlipCard.d1;
-		Defenitions_Ch28 de2 = FlipCard.d2;
-		Defenitions_Ch29 de3 = FlipCard.d3;
+		Defenitions_Ch26 de = DisplayCard.d;
+		Defenitions_Ch27 de1 = DisplayCard.d1;
+		Defenitions_Ch28 de2 = DisplayCard.d2;
+		Defenitions_Ch29 de3 = DisplayCard.d3;
 		EmbedBuilder b = new EmbedBuilder();
 		
 		if(event.getReactionEmote().getName().equals("😎"))

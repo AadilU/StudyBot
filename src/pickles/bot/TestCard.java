@@ -140,7 +140,7 @@ public class TestCard
 		}
 		else
 		{
-			helloCommand.i = 0;
+			CommandList.i = 0;
 			ci = 0;
 		}
 	}

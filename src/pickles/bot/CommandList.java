@@ -11,7 +11,7 @@ import net.dv8tion.jda.internal.handle.GuildEmojisUpdateHandler;
 
 import java.awt.Color;
 import java.util.*;
-public class helloCommand extends ListenerAdapter
+public class CommandList extends ListenerAdapter
 {
 	public static int i = 0;
 	public void onGuildMessageReceived(GuildMessageReceivedEvent event)
@@ -33,7 +33,7 @@ public class helloCommand extends ListenerAdapter
 					break;
 				}
 				else
-					FlipCard.runCMD(event, args[1]);
+					DisplayCard.runCMD(event, args[1]);
 				break;
 			}
 			
