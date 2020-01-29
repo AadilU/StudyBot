@@ -16,6 +16,7 @@ public class TestCard
 	static Defenitions_Ch27 d1 = new Defenitions_Ch27();
 	static Defenitions_Ch28 d2 = new Defenitions_Ch28();
 	static Defenitions_Ch29 d3 = new Defenitions_Ch29();
+	static Defenitions_Ch30 d4 = new Defenitions_Ch30();
 	static int ci;
 	static String args2;
 	public static void runCMD(GuildMessageReceivedEvent event, String args1)
@@ -53,6 +54,13 @@ public class TestCard
 			event.getChannel().sendMessage(b.build()).queue();
 			break;
 		}
+		case("30"):
+		{
+			d4 = new Defenitions_Ch30();
+			b.setTitle(d4.di);
+			event.getChannel().sendMessage(b.build()).queue();
+			break;
+		}
 		default:
 			event.getChannel().sendMessage("Chapter not found").queue();
 			break;
@@ -77,7 +85,7 @@ public class TestCard
 					event.getChannel().sendMessage("Correct").queue();
 				}
 				else
-				event.getChannel().sendMessage("Incorrect, The correct answer was " + d.t).queue();
+				event.getChannel().sendMessage("Incorrect, the correct answer was " + d.t).queue();
 				break;
 			}
 			case("27"):
@@ -87,7 +95,7 @@ public class TestCard
 					event.getChannel().sendMessage("Correct").queue();
 				}
 				else
-				event.getChannel().sendMessage("Incorrect, The correct answer was " + d1.t).queue();
+				event.getChannel().sendMessage("Incorrect, the correct answer was " + d1.t).queue();
 				break;
 			}
 			case("28"):
@@ -97,7 +105,7 @@ public class TestCard
 					event.getChannel().sendMessage("Correct").queue();
 				}
 				else
-				event.getChannel().sendMessage("Incorrect, The correct answer was " + d2.t).queue();
+				event.getChannel().sendMessage("Incorrect, the correct answer was " + d2.t).queue();
 				break;
 			}
 			case("29"):
@@ -107,7 +115,17 @@ public class TestCard
 					event.getChannel().sendMessage("Correct").queue();
 				}
 				else
-				event.getChannel().sendMessage("Incorrect, The correct answer was " + d3.t).queue();
+				event.getChannel().sendMessage("Incorrect, the correct answer was " + d3.t).queue();
+				break;
+			}
+			case("30"):
+			{
+				if((args.toLowerCase()).equals(d4.t.toLowerCase()))
+				{
+					event.getChannel().sendMessage("Correct").queue();
+				}
+				else
+					event.getChannel().sendMessage("Incorrect, the correct answer was " + d4.t).queue();
 				break;
 			}
 		}
@@ -134,6 +152,11 @@ public class TestCard
 			case("29"):
 			{
 				TestCard.runCMD(event, "29");
+				break;
+			}
+			case("30"):
+			{
+				TestCard.runCMD(event, "30");
 				break;
 			}
 			}

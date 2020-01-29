@@ -14,6 +14,7 @@ public class DisplayCard
 	static Defenitions_Ch27 d1;
 	static Defenitions_Ch28 d2;
 	static Defenitions_Ch29 d3;
+	static Defenitions_Ch30 d4;
 	public static void runCMD(GuildMessageReceivedEvent event, String args1)
 	{
 		switch(args1)
@@ -55,6 +56,16 @@ public class DisplayCard
 			b.setTitle(d3.t);
 			b.setColor(c);
 			event.getChannel().sendMessage(b.build()).queue(message -> message.addReaction("👏").queue());
+			break;
+		}
+		
+		case("30"):
+		{
+			Color c = Color.YELLOW;
+			d4 = new Defenitions_Ch30();
+			b.setTitle(d4.t);
+			b.setColor(c);
+			event.getChannel().sendMessage(b.build()).queue(message -> message.addReaction("😀").queue());
 			break;
 		}
 		
