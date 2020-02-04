@@ -15,6 +15,7 @@ public class DisplayCard
 	static Defenitions_Ch28 d2;
 	static Defenitions_Ch29 d3;
 	static Defenitions_Ch30 d4;
+	static Defenitions_Ch31 d5;
 	public static void runCMD(GuildMessageReceivedEvent event, String args1)
 	{
 		switch(args1)
@@ -69,6 +70,15 @@ public class DisplayCard
 			break;
 		}
 		
+		case("31"):
+		{
+			Color c = Color.decode("#FF4F29");
+			d5 = new Defenitions_Ch31();
+			b.setTitle(d5.t);
+			b.setColor(c);
+			event.getChannel().sendMessage(b.build()).queue(message -> message.addReaction("😃").queue());
+			break;
+		}
 		default:
 			event.getChannel().sendMessage("Chapter not found").queue();
 			break;
