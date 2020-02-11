@@ -18,6 +18,7 @@ public class ChangeCard extends ListenerAdapter
 		Defenitions_Ch29 de3 = DisplayCard.d3;
 		Defenitions_Ch30 de4 = DisplayCard.d4;
 		Defenitions_Ch31 de5 = DisplayCard.d5;
+		Defenitions_Ch32 de6 = DisplayCard.d6;
 		EmbedBuilder b = new EmbedBuilder();
 		
 		if(event.getReactionEmote().getName().equals("😎"))
@@ -147,5 +148,27 @@ public class ChangeCard extends ListenerAdapter
 									de5.c++;
 								}
 							}
+							else 
+								if(event.getReactionEmote().getName().equals("😊"))
+								{
+									Color d = Color.decode("#F39C12");
+									Color c = Color.decode("#F39C12");
+									if((de6.c % 2) == 0)
+									{
+										b.setTitle(de6.di);
+										b.setColor(c);
+									}
+									else
+									{
+										b.setTitle(de6.t);
+										b.setColor(c);
+									}
+									
+									if(!event.getMember().getUser().equals(event.getJDA().getSelfUser()))
+									{
+										event.getChannel().sendMessage(b.build()).queue(message -> message.addReaction("😊").queue());
+										de6.c++;
+									}
+								}
 	}
 }

@@ -18,6 +18,7 @@ public class TestCard
 	static Defenitions_Ch29 d3 = new Defenitions_Ch29();
 	static Defenitions_Ch30 d4 = new Defenitions_Ch30();
 	static Defenitions_Ch31 d5 = new Defenitions_Ch31();
+	static Defenitions_Ch32 d6 = new Defenitions_Ch32();
 	static int ci;
 	static String args2;
 	public static void runCMD(GuildMessageReceivedEvent event, String args1)
@@ -66,6 +67,13 @@ public class TestCard
 		{
 			d5 = new Defenitions_Ch31();
 			b.setTitle(d5.di);
+			event.getChannel().sendMessage(b.build()).queue();
+			break;
+		}
+		case("32"):
+		{
+			d6 = new Defenitions_Ch32();
+			b.setTitle(d6.di);
 			event.getChannel().sendMessage(b.build()).queue();
 			break;
 		}
@@ -146,6 +154,16 @@ public class TestCard
 					event.getChannel().sendMessage("Incorrect, the correct answer was " + d5.t).queue();
 				break;
 			}
+			case("32"):
+			{
+				if((args.toLowerCase()).equals(d6.t.toLowerCase()))
+				{
+					event.getChannel().sendMessage("Correct").queue();
+				}
+				else
+					event.getChannel().sendMessage("Incorrect, the correct answer was " + d6.t).queue();
+				break;
+			}
 		}
 		if(ci < 5)
 		{
@@ -180,6 +198,10 @@ public class TestCard
 			case("31"):
 			{
 				TestCard.runCMD(event, "31");
+			}
+			case("32"):
+			{
+				TestCard.runCMD(event, "32");
 			}
 			}
 		}

@@ -16,6 +16,7 @@ public class DisplayCard
 	static Defenitions_Ch29 d3;
 	static Defenitions_Ch30 d4;
 	static Defenitions_Ch31 d5;
+	static Defenitions_Ch32 d6;
 	public static void runCMD(GuildMessageReceivedEvent event, String args1)
 	{
 		switch(args1)
@@ -77,6 +78,16 @@ public class DisplayCard
 			b.setTitle(d5.t);
 			b.setColor(c);
 			event.getChannel().sendMessage(b.build()).queue(message -> message.addReaction("😃").queue());
+			break;
+		}
+		
+		case("32"):
+		{
+			Color c = Color.decode("#F39C12");
+			d6 = new Defenitions_Ch32();
+			b.setTitle(d6.t);
+			b.setColor(c);
+			event.getChannel().sendMessage(b.build()).queue(message -> message.addReaction("😊").queue());
 			break;
 		}
 		default:
