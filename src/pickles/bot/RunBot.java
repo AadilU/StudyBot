@@ -20,7 +20,7 @@ public class RunBot extends ListenerAdapter{
 	public static void main(String[] args) throws LoginException
 	{
 		System.out.println("Starting");
-		jda = new JDABuilder(AccountType.BOT).setToken("NjM4MTk5MjQ0MjAwNjA3NzU1.Xb6Nwg.r1bSzG5q0810uZdR-PVEZgiIREc").build();
+		jda = new JDABuilder(AccountType.BOT).setToken("Token").build();
 		jda.addEventListener(new CommandList());
 		jda.addEventListener(new ChangeCard());
 	}
